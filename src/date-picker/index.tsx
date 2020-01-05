@@ -1,18 +1,18 @@
 import * as React from "react";
 import { DatePicker as $DatePicker } from "antd";
 import { Field, FieldProps } from "formik";
-import {
-  DatePickerProps as $DatePickerProps,
-  MonthPickerProps as $MonthPickerProps,
-  RangePickerProps as $RangePickerProps,
-  WeekPickerProps as $WeekPickerProps,
-} from "antd/lib/date-picker/interface";
+// import {
+//   DatePickerProps as $DatePickerProps,
+//   MonthPickerProps as $MonthPickerProps,
+//   RangePickerProps as $RangePickerProps,
+//   WeekPickerProps as $WeekPickerProps,
+// } from "antd/lib/date-picker/interface";
 import moment from "moment";
 import { FormikFieldProps } from "../FieldProps";
 
 const { MonthPicker: $MonthPicker, RangePicker: $RangePicker, WeekPicker: $WeekPicker, } = $DatePicker;
 
-export type DatePickerProps = FormikFieldProps & $DatePickerProps;
+export type DatePickerProps = any
 
 export const DatePicker = ({ name, validate, onChange, ...restProps }: DatePickerProps) => (
   <Field name={name} validate={validate}>
@@ -32,7 +32,7 @@ export const DatePicker = ({ name, validate, onChange, ...restProps }: DatePicke
 
 export default DatePicker
 
-export type MonthPickerProps = FormikFieldProps & $MonthPickerProps;
+export type MonthPickerProps = FormikFieldProps & any
 
 DatePicker.MonthPicker = ({ name, validate, onChange, ...restProps }: MonthPickerProps) => (
   <Field name={name} validate={validate}>
@@ -50,7 +50,7 @@ DatePicker.MonthPicker = ({ name, validate, onChange, ...restProps }: MonthPicke
   </Field>
 );
 
-export type RangePickerProps = FormikFieldProps & $RangePickerProps;
+export type RangePickerProps = FormikFieldProps & any
 
 DatePicker.RangePicker = ({ name, validate, onChange, ...restProps }: RangePickerProps) => (
   <Field name={name} validate={validate}>
@@ -69,7 +69,7 @@ DatePicker.RangePicker = ({ name, validate, onChange, ...restProps }: RangePicke
   </Field>
 );
 
-export type WeekPickerProps = FormikFieldProps & $WeekPickerProps;
+export type WeekPickerProps = FormikFieldProps & any
 
 DatePicker.WeekPicker = ({ name, validate, onChange, ...restProps }: WeekPickerProps) => (
   <Field name={name} validate={validate}>
